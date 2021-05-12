@@ -1,5 +1,14 @@
 <?php
 
+
+/*
+ * Adds read more link after excerpt (to fix events calendar readmore)
+ */
+function modify_read_more_link() {
+	return '<br/><a class="more-link" href="' . get_permalink() . '">Läs mer</a>';
+}
+add_filter( 'excerpt_more', 'modify_read_more_link' );
+
 /*
  * Adds offline eventAttendanceMode to non-virtual events
  */
