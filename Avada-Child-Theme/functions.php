@@ -92,7 +92,6 @@ add_filter( 'tribe_events_add_no_index_meta', '__return_false' );
 /* child style setup */
 function theme_enqueue_styles() {
     wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'avada-stylesheet' ), 1.4 );
-    wp_enqueue_script( 'rek-ai', "https://static.rek.ai/80e4de3d.js");
     wp_enqueue_script( 'visit_js', get_stylesheet_directory_uri() . '/custom.js', array('jquery','jquery-ui-core','jquery-ui-widget'), 1.0, true);
 
     /* disable google fonts */
